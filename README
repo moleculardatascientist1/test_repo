@@ -1,0 +1,17 @@
+Akademia
+================
+
+Zabawa z zewnętrznym API (na przykładzie GitHub)
+
+1. Instalacja gema do obsługi API z https://github.com/peter-murach/github
+
+gem install github_api
+
+2. Dodanie nowego pola do userów z nazwą Github użytkownika
+
+
+class AddGithubToUsers < ActiveRecord::Migration
+  def change
+    add_column :users, :github_name, :string
+  end
+end
